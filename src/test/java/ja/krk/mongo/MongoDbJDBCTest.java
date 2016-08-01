@@ -1,6 +1,6 @@
-package epam.ja.krk;
+package ja.krk.mongo;
 
-import ja.krk.mongo.JasDBTest;
+import ja.krk.mongo.mongo.JasDBTest;
 import org.testng.annotations.Test;
 
 /**

@@ -58,7 +58,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
         <configuration>
-          <mainClass>ja.krk.mongo.JasDBTest</mainClass>
+          <mainClass>ja.krk.mongo.mongo.JasDBTest</mainClass>
         </configuration>
       </plugin>
     </plugins>
