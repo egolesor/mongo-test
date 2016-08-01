@@ -1,4 +1,4 @@
-package ja.krk.mongo;
+package ja.krk.mongo.mongo;
 
 import com.mongodb.*;
 import com.mongodb.util.JSON;
