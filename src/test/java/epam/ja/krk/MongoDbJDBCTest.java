@@ -1,38 +1,33 @@
 package epam.ja.krk;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import ja.krk.mongo.JasDBTest;
+import org.testng.annotations.Test;
 
 /**
  * Unit test for simple App.
  */
-public class MongoDbJDBCTest
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public MongoDbJDBCTest(String testName )
-    {
-        super( testName );
+public class MongoDbJDBCTest{
+
+    //operation:get	100	2	0:00:02.916
+    @Test
+    public void oneCollection100TimeTest(){
+        JasDBTest jasDBTest = new JasDBTest(100);
+
+        jasDBTest.methodTest("member1=member.json");
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( MongoDbJDBCTest.class );
+    @Test
+    public void twoCollection100TimeTest(){
+        JasDBTest jasDBTest = new JasDBTest(100);
+
+        jasDBTest.methodTest("member1=member.json", "member2=member.json");
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void oneCollection1000TimeTest(){
+        JasDBTest jasDBTest = new JasDBTest(1000);
+
+        jasDBTest.methodTest("member1=member.json");
     }
+
 }
